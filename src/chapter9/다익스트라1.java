@@ -79,6 +79,7 @@ public class 다익스트라1 {
             graph.add(new ArrayList<Node>()); // 그래프 초기화
 
         for (int i = 0; i < m; i++) {
+
             int a = sc.nextInt();
             int b = sc.nextInt();
             int c = sc.nextInt();
