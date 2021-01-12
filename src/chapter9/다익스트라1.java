@@ -92,7 +92,7 @@ public class 다익스트라1 {
         }
 
         Arrays.fill(table, INF); // 비용 초기화
-
+        Arrays.fill(table, INF);
         dijkstra(start);
 
         for (int i = 1; i <= n; i++) {
