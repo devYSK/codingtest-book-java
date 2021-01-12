@@ -86,7 +86,8 @@ public class 다익스트라1 {
 
             System.out.print("a = " + a);
             System.out.print("b = " + b);
-            System.out.print("c = " + c);;
+            System.out.print("c = " +  c);
+            System.out.println();
             graph.get(a).add(new Node(b, c)); // a번 노드에서 b번 노드로 가는 비용은 c
         }
 
