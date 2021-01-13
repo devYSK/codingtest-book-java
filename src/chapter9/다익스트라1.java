@@ -34,6 +34,7 @@ public class 다익스트라1 {
     public static void dijkstra (int start) {
         table[start] = 0; // 시작 노드의 거리를 0으로 초기화
         int test = 1;
+        int test2 = 99;
         visited[start] = true;
 
         for (int i = 0; i < graph.get(start).size(); i++) { // start 노드부터 시작하는 모든 간선의 거리 초기화
