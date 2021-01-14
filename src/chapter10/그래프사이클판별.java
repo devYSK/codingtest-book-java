@@ -1,7 +1,5 @@
 package chapter10;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 import java.util.Scanner;
 
 public class 그래프사이클판별 {
