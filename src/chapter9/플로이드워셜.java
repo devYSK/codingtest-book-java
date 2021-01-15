@@ -17,8 +17,8 @@ public class 플로이드워셜 {
         n = sc.nextInt(); // 노드 갯수
         m = sc.nextInt(); // 간선 갯수
 
-        for (int i = 0; i < graph.length; i++) {
-            Arrays.fill(graph[i], INF);
+        for (int[] ints : graph) {
+            Arrays.fill(ints, INF);
         }
 
         // 자기자신에서 자기자신으로 가면 0으로 초기화. 못가는 길이라는 뜻
