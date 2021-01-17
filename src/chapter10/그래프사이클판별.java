@@ -37,7 +37,7 @@ public class 그래프사이클판별 {
             parent[i] = i;
         }
 
-        boolean isCycle = false;
+        boolean isCycle = false; // 사이클 판별 변수
 
         for (int i = 0; i < e; i++) {// 간선의 갯수만큼
             int a = sc.nextInt();
@@ -49,7 +49,6 @@ public class 그래프사이클판별 {
             }
             else
                 unionParent(a, b);
-
 
         }
 
