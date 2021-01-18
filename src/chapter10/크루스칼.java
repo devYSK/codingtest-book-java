@@ -54,10 +54,10 @@ public class 크루스칼 {
 
         Collections.sort(edges);
 
-        for (int i = 0; i < edges.size(); i++) {
-            int cost = edges.get(i).getDistance();
-            int a = edges.get(i).getNodeA();
-            int b = edges.get(i).getNodeB();
+        for (Edge edge : edges) {
+            int cost = edge.getDistance();
+            int a = edge.getNodeA();
+            int b = edge.getNodeB();
 
             if (findParent(a) != findParent(b)) {
                 union(a, b);
@@ -65,7 +65,6 @@ public class 크루스칼 {
             }
 
         }
-
         System.out.println(result);
 
     }

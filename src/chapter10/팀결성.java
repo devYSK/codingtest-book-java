@@ -8,6 +8,7 @@ public class 팀결성 {
 
     private static int[] team;
 
+    // union
     private static int findTeam(int x) {
         if (x == team[x])
             return x;
