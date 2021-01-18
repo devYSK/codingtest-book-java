@@ -87,25 +87,14 @@ class Edge implements Comparable<Edge> {
         return distance;
     }
 
-    public void setDistance(int distance) {
-        this.distance = distance;
-    }
-
     public int getNodeA() {
         return nodeA;
-    }
-
-    public void setNodeA(int nodeA) {
-        this.nodeA = nodeA;
     }
 
     public int getNodeB() {
         return nodeB;
     }
 
-    public void setNodeB(int nodeB) {
-        this.nodeB = nodeB;
-    }
 
     @Override
     public int compareTo(Edge o) {
