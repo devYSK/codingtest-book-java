@@ -6,6 +6,18 @@ import java.util.Collections;
 import java.util.Scanner;
 import java.util.function.Consumer;
 
+
+/**
+ * 1. 간선 데이터를 비용에 따라 오름차순으로 정렬
+ * 2. 간선을 하나씩 확인하며 현재의 간선이 사이클을 발생시키는지 확인
+ *   2.1 사이클이 발생하지 않는 경우 최소 신장 트리에 포함
+ *   2.2 사이클이 발생하는 경우 최소 신장 트리에 포함 시키지 않는다.
+ *
+ * 3. 모든 간선에 대하여 2번의 과정 반복
+ *
+ * 최종적인 신장 트리의 간선 개수 = 노드(정점)의 개수 - 1
+ *
+ */
 public class 크루스칼 {
 
 
