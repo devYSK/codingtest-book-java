@@ -87,8 +87,22 @@ public class 크루스칼 {
             System.out.println(edge);
         }
 
+        System.out.println(getCost(1, 3));
+        System.out.println(getCost(1, 2));
+        System.out.println(getCost(5, 6));
+
+
         System.out.println(result);
 
+    }
+
+    private static int getCost(int a, int b) {
+        for (Edge edge : edges) {
+            if (edge.getNodeA() == a && edge.getNodeB() == b)
+                return edge.getDistance();
+        }
+
+        return 0;
     }
 
 }
