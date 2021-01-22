@@ -57,6 +57,7 @@ public class 크루스칼 {
             parent[i] = i;
         }
 
+        // 간선 정보 입력받기
         for (int i = 0; i < e; i++) {
             int a = sc.nextInt();
             int b = sc.nextInt();
@@ -64,19 +65,28 @@ public class 크루스칼 {
             edges.add(new Edge(cost, a, b));
         }
 
+        //간선을 비용순으로 정렬
         Collections.sort(edges);
+
+
 
         for (Edge edge : edges) {
             int cost = edge.getDistance();
             int a = edge.getNodeA();
             int b = edge.getNodeB();
 
+            // 사이클이 발생하지 않는 경우에만 집합에 포함.
             if (findParent(a) != findParent(b)) {
                 union(a, b);
                 result += cost;
             }
 
         }
+
+        for (Edge edge : edges) {
+            System.out.println(edge);
+        }
+
         System.out.println(result);
 
     }
@@ -107,6 +117,15 @@ class Edge implements Comparable<Edge> {
         return nodeB;
     }
 
+
+    @Override
+    public String toString() {
+        return
+                "distance=" + distance +
+                ", nodeA=" + nodeA +
+                ", nodeB=" + nodeB +
+                '}';
+    }
 
     @Override
     public int compareTo(Edge o) {
