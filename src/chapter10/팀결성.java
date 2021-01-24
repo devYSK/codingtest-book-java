@@ -1,5 +1,6 @@
 package chapter10;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class 팀결성 {
@@ -8,14 +9,18 @@ public class 팀결성 {
 
     private static int[] team;
 
-    // union
+    // 특정 원소가 속한 집합을 찾기 [어느 팀 찾기]
     private static int findTeam(int x) {
+
+        System.out.println("x = " + x + ", team[x] = " + team[x]);
         if (x == team[x])
             return x;
+
 
         return team[x] = findTeam(team[x]);
     }
 
+    // 두 원소가 속한 집합을 합치기 [ 팀 합치기 ]
     private static void unionTeam(int a, int b) {
         a = findTeam(a);
         b = findTeam(b);
@@ -35,6 +40,7 @@ public class 팀결성 {
 
         team = new int[n + 1];
 
+        // 부모 테이블상에서, 부모를 자기 자신으로 초기화
         for (int i = 1; i <= n; i++) {
             team[i] = i;
         }
@@ -54,8 +60,15 @@ public class 팀결성 {
                     System.out.println("No");
             }
 
+            System.out.print("table = [");
+            for (int j = 0; j < n + 1; j++)
+                System.out.print(j + ", ");
+            System.out.println("]");
+            System.out.println("table = " + Arrays.toString(team));
 
         }
+
+        System.out.println(Arrays.toString(team));
 
     }
 
