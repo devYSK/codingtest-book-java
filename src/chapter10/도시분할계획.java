@@ -65,10 +65,10 @@ public class 도시분할계획 {
 
         int lastNodeCost = 0; // 최소 신장 트리에 포함되는 간선 중에서 비용이 가장 큰 간선
 
-        for (int i = 0; i < nodes.size(); i++) {
-            int cost = nodes.get(i).getDistance();
-            int a = nodes.get(i).getNodeA();
-            int b = nodes.get(i).getNodeB();
+        for (Node node : nodes) {
+            int cost = node.getDistance();
+            int a = node.getNodeA();
+            int b = node.getNodeB();
 
             // 사이클이 발생하지 않는 경우에만 집합에 포함
             if (findParent(a) != findParent(b)) {
