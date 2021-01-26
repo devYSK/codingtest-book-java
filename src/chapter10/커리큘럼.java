@@ -12,7 +12,7 @@ public class 커리큘럼 {
     // 모든 노드에 대한 진입차수는 0으로 초기화
     public static int[] indegree = new int[501];
     // 각 노드에 연결된 간선 정보를 담기 위한 연결 리스트 초기화
-    public static ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();
+    public static ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
     // 각 강의 시간을 0으로 초기화
     public static int[] times = new int[501];
 
@@ -60,7 +60,7 @@ public class 커리큘럼 {
 
         // 그래프 초기화
         for (int i = 0; i <= v; i++) {
-            graph.add(new ArrayList<Integer>());
+            graph.add(new ArrayList<>());
         }
 
         // 방향 그래프의 모든 간선 정보를 입력받기
