@@ -8,17 +8,18 @@ import java.util.Scanner;
 public class 커리큘럼 {
 
     // 노드의 개수(V)
-    public static int v;
-    // 모든 노드에 대한 진입차수는 0으로 초기화
-    public static int[] indegree = new int[501];
+    private static int v;
+    // 모든 노드에 대한 진입차수는 0으로 초기화  n <= 500
+    private static int[] indegree = new int[501];
     // 각 노드에 연결된 간선 정보를 담기 위한 연결 리스트 초기화
-    public static ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
-    // 각 강의 시간을 0으로 초기화
-    public static int[] times = new int[501];
+    private static ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
+    // 각 강의 시간을 0으로 초기화 n <= 500
+    private static int[] times = new int[501];
 
     // 위상 정렬 함수
     public static void topologySort() {
         int[] result = new int[501]; // 알고리즘 수행 결과를 담을 배열
+
         for (int i = 1; i <= v; i++) {
             result[i] = times[i];
         }
@@ -56,7 +57,7 @@ public class 커리큘럼 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        v = sc.nextInt();
+        v = sc.nextInt(); // 강의의 수
 
         // 그래프 초기화
         for (int i = 0; i <= v; i++) {
