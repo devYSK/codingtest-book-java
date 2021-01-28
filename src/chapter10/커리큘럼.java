@@ -1,9 +1,6 @@
 package chapter10;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 
 public class 커리큘럼 {
 
@@ -78,6 +75,8 @@ public class 커리큘럼 {
             }
         }
 
+        System.out.println(Arrays.toString(times));
+        System.out.println(Arrays.toString(indegree));
         topologySort();
     }
 }
