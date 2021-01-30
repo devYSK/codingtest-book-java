@@ -9,13 +9,18 @@ public class 곱하기혹은더하기 {
 
         Scanner sc = new Scanner(System.in);
 
-        int[] numbers = Arrays.stream(sc.nextLine().split("")).mapToInt(Integer::parseInt).toArray();
+        String input = sc.nextLine();
 
-        int result = 1;
+        long result = input.charAt(0) - '0';
 
-        for (int num : numbers) {
-            if (num != 0)
+        for (int i = 1; i < input.length(); i++) {
+            int num = input.charAt(i) - '0';
+
+            if (num <= 1 || result <= 1)
+                result += num;
+            else
                 result *= num;
+
         }
 
         System.out.println(result);
