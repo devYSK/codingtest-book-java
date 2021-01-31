@@ -33,4 +33,26 @@ public class 문자열뒤집기 {
         System.out.println(Math.min(zeroCnt, oneCnt));
 
     }
+
+    private static void otherAnswer(String str) {
+        char[] chars = str.toCharArray();
+
+        int n = chars.length;
+        int[] count = new int[2]; // 0 : zeroCount, 1: oneCount
+        char lastChar = chars[0];
+
+        for (int i = 1; i < n; i++) {
+            if (lastChar != chars[i]) {
+                count[lastChar - 48] += 1;
+                lastChar = chars[i];
+            }
+        }
+
+        // 문자 마지막 ++
+        count[lastChar - 48] += 1;
+
+        System.out.println(Math.min(count[0], count[1]));
+
+    }
+
 }
