@@ -22,21 +22,15 @@ public class 만들수없는금액 {
 
         int target = 1;
 
-        for (int i = 0; i < coins.size(); i++) {
-
-            if (target < coins.get(i))
+        for (Integer coin : coins) {
+            if (target < coin)
                 break;
 
-
-            target += coins.get(i);
+            target += coin;
 
         }
 
-
-        System.out.println(coins);
-
         System.out.println(target);
-
 
     }
 }
