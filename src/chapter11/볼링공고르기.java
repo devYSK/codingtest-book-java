@@ -31,7 +31,7 @@ public class 볼링공고르기 {
 
         int result = 0;
 
-        for (int i = 0; i < m + 1; i++) {
+        for (int i = 1; i < m + 1; i++) {
             n -= ballWeights[i];
             result += ballWeights[i] * n;
         }
