@@ -7,9 +7,6 @@ public class 럭키스트레이트 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-
-
-
         String input = sc.nextLine();
         int length = input.length();
         int sum = 0;
@@ -22,8 +19,6 @@ public class 럭키스트레이트 {
             sum -= (int) input.charAt(i);
         }
 
-
         System.out.println(sum == 0 ? "LUCKY" : "READY");
-
     }
 }
