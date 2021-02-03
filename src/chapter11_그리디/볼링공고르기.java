@@ -1,7 +1,6 @@
-package chapter11;
+package chapter11_그리디;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 

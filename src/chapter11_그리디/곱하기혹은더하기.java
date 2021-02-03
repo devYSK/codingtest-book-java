@@ -1,6 +1,5 @@
-package chapter11;
+package chapter11_그리디;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class 곱하기혹은더하기 {
