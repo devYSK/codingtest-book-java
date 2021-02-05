@@ -7,8 +7,10 @@ public class 문자열압축 {
     public static int solution(String s) {
         int answer = s.length();
 
+        // n(문자열의 길이)
+        // 1부터 n/2까지의 모든 수를 단위로 하여 탐색하고 가장 짧게 압축되는 길이 출력
         for (int step = 1; step < s.length() / 2 + 1; step++) {
-            String compressed = "";
+            StringBuilder compressed = new StringBuilder();
             String prev = s.substring(0, step);
             int cnt = 1;
 
@@ -22,7 +24,7 @@ public class 문자열압축 {
                 if (prev.equals(sub.toString())) {
                     cnt +=1;
                 } else {
-                    compressed += (cnt >= 2) ? cnt + prev : prev;
+                    compressed.append((cnt >= 2) ? cnt + prev : prev);
                     sub = new StringBuilder();
                     for (int k = j; k < j + step; k++) {
                         if (k < s.length())
@@ -35,7 +37,7 @@ public class 문자열압축 {
 
             }
 
-            compressed += (cnt >= 2) ? cnt + prev : prev;
+            compressed.append((cnt >= 2) ? cnt + prev : prev);
 
             answer = Math.min(answer, compressed.length());
 
@@ -44,4 +46,12 @@ public class 문자열압축 {
         return answer;
     }
 
+    public static void main(String[] args) {
+        System.out.println(solution("aabbaccc"));
+        System.out.println(solution("ababcdcdababcdcd"));
+        System.out.println(solution("abcabcdede"));
+        System.out.println(solution("abcabcabcabcdededededede"));
+        System.out.println(solution("xababcdcdababcdcd"));
+
+    }
 }
